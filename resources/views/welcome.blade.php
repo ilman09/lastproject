@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <!doctype html>
 <html lang="en">
 
@@ -14,30 +18,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <title>LASTPROJECT</title>
+    <title>LAST PROJECT</title>
 </head>
 
 <body>
-
- <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="{{asset('images/logo.png')}}" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="d-flex">
-                    <a href="#" class="btn btn-master btn-secondary me-3">
-                        Masuk
-                    </a>
-                    <a href="#" class="btn btn-master btn-primary">
-                        Daftar
-                    </a>
-                </div>
-        </div>
-    </nav>
-
 
     <section class="banner">
         <div class="container">
@@ -51,7 +35,7 @@
                             <p class="support">
                             <span class="text-blue">LAST PROJECT.</span> 
                             <p class="cta">
-                                <a href="#" class="btn btn-master btn-primary">
+                                <a href="{{route('input')}}" class="btn btn-master btn-primary">
                                     Mulai Masukan Data
                                 </a>
                             </p>
@@ -88,7 +72,7 @@
             <div class="row copyright">
                 <div class="col-lg-12 col-12">
                         <p>
-                            All Rights Reserved. Copyright LAST PROJECT.
+                            All Rights Reserved. Copyright <span class="text-blue">LAST PROJECT</span>  by DAR.
                         </p>
                 </div>
             </div>
@@ -102,3 +86,5 @@
 </body>
 
 </html>
+
+@endsection
