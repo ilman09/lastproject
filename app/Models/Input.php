@@ -10,10 +10,10 @@ class Input extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'nis', 'nama_siswa', 'jenis_kelamin', 'tahun_masuk', 'asal_kota', 'asal_sekolah'];
+    protected $fillable = ['user_id', 'nis', 'nama_siswa', 'jenis_kelamin', 'tahun', 'asal_kota', 'asal_sekolah'];
 
-    public function setExpiredAttribute($value)
+    public function setTahunAttribute($value)
     {
-        $this->attributes['tahun_masuk'] = date('Y-m-d H:i:s');
+        $this->attributes['tahun'] = date('Y-m-t', strtotime($value));
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Input;
 use Illuminate\Http\Request;
 use Auth;
+use Mail;
 
 class InputController extends Controller
 {
@@ -43,12 +44,14 @@ class InputController extends Controller
 
         //update user data
         $user = Auth::user();
+        $user->email = $data['email'];
+        $user->name = $data['name'];
         $user->save();
 
         $input = Input::create($data);
 
 
-        return $input;
+        return redirect(route('input.success'));
     }
 
     /**

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nis');
             $table->string('nama_siswa');
             $table->string('jenis_kelamin');
-            $table->date('tahun_masuk');
+            $table->date('tahun');
             $table->string('asal_kota');
             $table->string('asal_sekolah');
             $table->timestamps();

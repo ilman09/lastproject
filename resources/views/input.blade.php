@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Tahun Masuk</label>
-                                    <input name="tahun_masuk" type="month" class="form-control">
+                                    <input name="tahun" type="month" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Asal Kota</label>
