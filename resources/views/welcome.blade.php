@@ -35,7 +35,7 @@
                             <p class="support">
                             <span class="text-blue">LAST PROJECT.</span> 
                             <p class="cta">
-                                <a href="{{route('input')}}" class="btn btn-master btn-primary">
+                                <a href="{{route('input.create')}}" class="btn btn-master btn-primary">
                                     Mulai Masukan Data
                                 </a>
                             </p>

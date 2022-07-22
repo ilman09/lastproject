@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\User\InputController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,20 +19,18 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-//socialite route
-Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
-Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+Route::get('input/success', [InputController::class, 'success'])->name('input.success');
+Route::get('input', [InputController::class, 'create'])->name('input.create');
+Route::post('input', [InputController::class, 'store'])->name('input.store');
 
-Route::get('input', function () {
-    return view('input');
-})->name('input');
-
-Route::get('success-input', function () {
-    return view('success_input');
-})->name('success-input');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+//socialite route
+Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
+Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+
 
 require __DIR__.'/auth.php';

@@ -21,30 +21,31 @@
                         </div>
                         <div class="col-lg-1 col-12"></div>
                         <div class="col-lg-6 col-12">
-                            <form action="{{route('success-input')}}" class="basic-form">
+                            <form action="{{route('input.store')}}" class="basic-form" method="POST">
+                                @csrf
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Nis</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="nis" type="number" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="nama_siswa" type="text" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="jenis_kelamin" type="text" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Tahun Masuk</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="tahun_masuk" type="month" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Asal Kota</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="asal_kota" type="text" class="form-control">
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Asal Sekolah Sebelumnya</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="asal_sekolah" type="text" class="form-control">
                                 </div>
                                 <button type="submit" class="w-100 btn btn-primary">Masukan</button>
                                 <p class="text-center subheader mt-4">
