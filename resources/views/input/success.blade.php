@@ -12,8 +12,8 @@
                     <h2 class="primary-header ">
                         Data Berhasil Di Simpan
                     </h2>
-                    <a href="#" class="btn btn-primary mt-3">
-                        Dashboard Saya
+                    <a href="{{route('welcome')}}" class="btn btn-primary mt-3">
+                        Halaman Utama
                     </a>
                 </div>
             </div>

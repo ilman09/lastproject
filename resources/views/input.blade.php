@@ -25,27 +25,62 @@
                                 @csrf
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Nis</label>
-                                    <input name="nis" type="number" class="form-control">
+                                    <input name="nis" type="number" class="form-control {{$errors->has('nis') ? 'is-invalid' : ''}}">
+                                    @if ($errors->has('nis'))
+                                        <p class="text-danger">{{$errors->first('nis')}}</p>
+                                    @endif
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-                                    <input name="nama_siswa" type="text" class="form-control">
+                                    <input name="nama_siswa" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
+                                    @if ($errors->has('nama_siswa'))
+                                        <p class="text-danger">{{$errors->first('nama_siswa')}}</p>
+                                    @endif
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                                    <input name="jenis_kelamin" type="text" class="form-control">
+                                    <select name="jenis_kelamin" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
+                                        <option value="pilih">Pilih</option>
+                                        <option value="laki_laki">Laki-Laki</option>
+                                        <option value="perempuan">Perempuan</option>
+                                    </select>
+                                    @if ($errors->has('jenis_kelamin'))
+                                        <p class="text-danger">{{$errors->first('jenis_kelamin')}}</p>
+                                    @endif
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Tahun Masuk</label>
-                                    <input name="tahun" type="month" class="form-control">
+                                    <input name="tahun" type="month" placeholder="Y-M-D" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
+                                    @if ($errors->has('tahun'))
+                                        <p class="text-danger">{{$errors->first('tahun')}}</p>
+                                    @endif
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Asal Kota</label>
-                                    <input name="asal_kota" type="text" class="form-control">
+                                    <select name="asal_kota" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
+                                        <option value="pilih">Pilih</option>
+                                        <option value="banten">Banten</option>
+                                        <option value="kota_tangerang">Kota Tangerang</option>
+                                        <option value="kabupaten_tangerang">Kabupaten Tangerang</option>
+                                        <option value="tangerang_selatan">Kota Selatan</option>
+                                        <option value="jakarta_pusat">Jakarta Pusat</option>
+                                        <option value="jakarta_selatan">Jakarta Selatan</option>
+                                        <option value="jakarta_barat">Jakarta Barat</option>
+                                        <option value="jakarta_utara">Jakarta Utara</option>
+                                        <option value="bengkulu">Bengkulu</option>
+                                        <option value="aceh">Kota Tangerang</option>
+                                        <option value="kota_tangerang">Aceh</option>
+                                    </select>
+                                    @if ($errors->has('asal_kota'))
+                                        <p class="text-danger">{{$errors->first('asal_kota')}}</p>
+                                    @endif
                                 </div>
                                 <div class="mb-4">
                                     <label for="exampleInputEmail1" class="form-label">Asal Sekolah Sebelumnya</label>
-                                    <input name="asal_sekolah" type="text" class="form-control">
+                                    <input name="asal_sekolah" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
+                                    @if ($errors->has('asal_sekolah'))
+                                        <p class="text-danger">{{$errors->first('asal_sekolah')}}</p>
+                                    @endif
                                 </div>
                                 <button type="submit" class="w-100 btn btn-primary">Masukan</button>
                                 <p class="text-center subheader mt-4">

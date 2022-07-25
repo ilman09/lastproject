@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Input;
 use Illuminate\Http\Request;
+use App\Http\Requests\User\Input\Store;
 use Auth;
 use Mail;
 
@@ -36,7 +37,7 @@ class InputController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Store $request)
     {
         //maping request data
         $data = $request->all();
@@ -44,8 +45,6 @@ class InputController extends Controller
 
         //update user data
         $user = Auth::user();
-        $user->email = $data['email'];
-        $user->name = $data['name'];
         $user->save();
 
         $input = Input::create($data);

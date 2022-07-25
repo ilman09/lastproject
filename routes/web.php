@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\User\InputController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,16 @@ Route::get('input/success', [InputController::class, 'success'])->name('input.su
 Route::get('input', [InputController::class, 'create'])->name('input.create');
 Route::post('input', [InputController::class, 'store'])->name('input.store');
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 //socialite route
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+
+//dashboard
+Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+
+//Route::get('/dashboard', function () {
+  //  return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
 
 
 require __DIR__.'/auth.php';

@@ -77,107 +77,6 @@ body {
     padding: 70px 0 70px 0;
   }
   
-  .testimonials .item-review {
-    border-radius: 13px;
-    background: #fff;
-    padding: 20px;
-  }
-  
-  .testimonials .item-review .message, .testimonials .item-review .user .info .role {
-    font-size: 16px;
-    font-weight: 400;
-    color: #5B5575;
-    line-height: 30px;
-    min-height: 90px;
-    margin-top: 30px;
-  }
-  
-  .testimonials .item-review .user {
-    margin-top: 30px;
-  }
-  
-  .testimonials .item-review .user .photo {
-    width: 56px;
-    height: 56px;
-    float: left;
-    margin-right: 16px;
-  }
-  
-  .testimonials .item-review .user .info {
-    padding-top: 5px;
-  }
-  
-  .testimonials .item-review .user .info .name {
-    color: #211B3D;
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 0;
-  }
-  
-  .testimonials .item-review .user .info .role {
-    min-height: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  .pricing {
-    margin-top: 100px;
-    background: #3748E3;
-    padding-top: 70px;
-    max-height: 620px;
-  }
-  
-  .pricing .copywriting {
-    margin-top: 80px;
-  }
-  
-  .pricing .support {
-    font-size: 16px;
-    font-weight: 400;
-    color: #CBB0FF;
-    line-height: 30px;
-    margin-top: 30px;
-  }
-  
-  .pricing .table-pricing {
-    background: #fff;
-    border-radius: 40px;
-    padding: 30px;
-    border: 1px solid #EAE8F5;
-  }
-  
-  .pricing .table-pricing .price {
-    font-size: 42px;
-    font-weight: 600;
-    color: #211B3D;
-    margin-bottom: 20px;
-  }
-  
-  .pricing .table-pricing .item-benefit-pricing img {
-    float: left;
-    margin-right: 8px;
-    margin-top: 2px;
-  }
-  
-  .pricing .table-pricing .item-benefit-pricing p {
-    font-size: 16px;
-    font-weight: 500;
-    color: #211B3D;
-  }
-  
-  .pricing .table-pricing .item-benefit-pricing .divider {
-    height: 1px;
-    width: 100%;
-    background: #E7E5F4;
-  }
-  
-  .pricing .paket-gila {
-    min-height: 697px;
-  }
-  
-  .pricing .paket-biasa {
-    min-height: 453px;
-  }
   
   .clear {
     clear: both;
@@ -199,7 +98,7 @@ body {
     margin-top: 30px;
   }
   
-  .btn-master, .btn-thirdty, .btn-primary, .btn-secondary {
+  .btn-master, .btn-thirdty, .btn-primary, .btn-bicit, .btn-bocot, .btn-secondary {
     padding: 11px 36px 11px 36px;
     border-radius: 100px;
     border: 0;
@@ -215,11 +114,29 @@ body {
     background: #286FB0;
     color: #fff;
   }
+
+  .btn-bicit {
+    background: #4490A8;
+    color: #fff;
+  }
+
+  .btn-bocot {
+    background: #22A9A1;
+    color: #fff;
+  }
   
   .btn-primary:hover {
     background: #31B380;
   }
   
+  .btn-bicit:hover {
+    background: #31B380;
+  }
+
+  .btn-bocot:hover {
+    background: #31B380;
+  }
+
   .story {
     font-weight: 600;
     font-size: 16px;
@@ -232,28 +149,6 @@ body {
     color: #211B3D;
   }
   
-  .benefits {
-    margin-bottom: 100px;
-  }
-  
-  .benefits .item-benefit .icon {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 20px;
-  }
-  
-  .benefits .item-benefit .title {
-    font-size: 20px;
-    color: #211B3D;
-    font-weight: 500;
-  }
-  
-  .benefits .item-benefit .support {
-    font-size: 16px;
-    font-weight: 400;
-    color: #5B5575;
-    line-height: 30px;
-  }
   
   .pb-70 {
     padding-bottom: 70px;
@@ -279,7 +174,9 @@ body {
     background: #F5EFFF;
     color: #286FB0;
   }
-  
+
+
+
   .banner {
     padding: 80px 0 80px 0;
   }
