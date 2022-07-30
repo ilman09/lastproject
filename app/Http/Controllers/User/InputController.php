@@ -18,7 +18,10 @@ class InputController extends Controller
      */
     public function index()
     {
-        //
+        $inputs = User::all();
+        return view('user.dashboard',[
+            'inputs' => $inputs
+        ]);
     }
 
     /**

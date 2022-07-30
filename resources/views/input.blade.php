@@ -41,7 +41,7 @@
                                     <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                                     <select name="jenis_kelamin" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
                                         <option value="pilih">Pilih</option>
-                                        <option value="laki_laki">Laki-Laki</option>
+                                        <option value="laki laki">Laki-Laki</option>
                                         <option value="perempuan">Perempuan</option>
                                     </select>
                                     @if ($errors->has('jenis_kelamin'))
@@ -60,16 +60,15 @@
                                     <select name="asal_kota" type="text" class="form-control {{$errors->has('nama_siswa') ? 'is-invalid' : ''}}">
                                         <option value="pilih">Pilih</option>
                                         <option value="banten">Banten</option>
-                                        <option value="kota_tangerang">Kota Tangerang</option>
-                                        <option value="kabupaten_tangerang">Kabupaten Tangerang</option>
-                                        <option value="tangerang_selatan">Kota Selatan</option>
-                                        <option value="jakarta_pusat">Jakarta Pusat</option>
-                                        <option value="jakarta_selatan">Jakarta Selatan</option>
-                                        <option value="jakarta_barat">Jakarta Barat</option>
-                                        <option value="jakarta_utara">Jakarta Utara</option>
+                                        <option value="kota tangerang">Kota Tangerang</option>
+                                        <option value="kabupaten tangerang">Kabupaten Tangerang</option>
+                                        <option value="tangerang selatan">Kota Selatan</option>
+                                        <option value="jakarta pusat">Jakarta Pusat</option>
+                                        <option value="jakarta selatan">Jakarta Selatan</option>
+                                        <option value="jakarta barat">Jakarta Barat</option>
+                                        <option value="jakarta utara">Jakarta Utara</option>
                                         <option value="bengkulu">Bengkulu</option>
-                                        <option value="aceh">Kota Tangerang</option>
-                                        <option value="kota_tangerang">Aceh</option>
+                                        <option value="aceh">Aceh</option>
                                     </select>
                                     @if ($errors->has('asal_kota'))
                                         <p class="text-danger">{{$errors->first('asal_kota')}}</p>

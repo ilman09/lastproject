@@ -20,23 +20,26 @@
                                     <th>Asal Sekolah</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                @forelse ($inputs as $input)
+                            </tbody>
+                            @forelse ($inputs as $input)
                                     <tr>
                                         <td>{{$input->nis}}</td>
                                         <td>{{$input->nama_siswa}}</td>
-                                    </tr>
+                                        <td>{{$input->jenis_kelamin}}</td>
+                                        <td>{{$input->tahun}}</td>
+                                        <td>{{$input->asal_kota}}</td>
+                                        <td>{{$input->asal_sekolah}}</td>
+                                    </tr> 
                                 @empty
                                     <tr>
-                                        <td colspan="3">No camps registered</td>
+                                        <td colspan"3">No Data</td>
                                     </tr>
-                                @endforelse
-                            </tbody>
+                            @endforelse
                         </table>
                         <div>
-                            <button type="submit" a href="/" class="w-10 btn btn-primary">Tampilkan Grafik</button>
-                            <button type="submit" a href="/" class="w-10 btn btn-bicit">Download PDF</button>
-                            <button type="submit" a href="/" class="w-10 btn btn-bocot">Download Excel</button>
+                            <a href="/" class="w-10 btn btn-primary" target="_blank">Tampilkan Grafik</a>
+                            <a href={{route('pdf')}} class="w-10 btn btn-bicit" target="_blank">Download PDF</a>
+                            <a href={{route('excel')}} class="w-10 btn btn-bocot" target="_blank">Download Excel</a>
                         </div>
                     </div>
                 </div>

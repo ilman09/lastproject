@@ -31,6 +31,9 @@ Route::get('auth/google/callback', [UserController::class, 'handleProviderCallba
 //dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
+Route::get('pdf', [HomeController::class, 'pdf'])->name('pdf');
+Route::get('excel',[HomeController::class, 'excel'])->name('excel');
+
 //Route::get('/dashboard', function () {
   //  return view('dashboard');
 //})->middleware(['auth'])->name('dashboard');
