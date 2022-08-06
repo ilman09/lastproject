@@ -33,10 +33,11 @@ Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard')
 
 Route::get('pdf', [HomeController::class, 'pdf'])->name('pdf');
 Route::get('excel',[HomeController::class, 'excel'])->name('excel');
+Route::get('grafik',[HomeController::class, 'grafik'])->name('grafik');
 
 //Route::get('/dashboard', function () {
-  //  return view('dashboard');
+//  return view('dashboard');
 //})->middleware(['auth'])->name('dashboard');
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -7,6 +7,7 @@ use App\Models\Input;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\InputsExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Providers\Charts;
 
 class HomeController extends Controller
 {
@@ -25,11 +26,16 @@ class HomeController extends Controller
                         "inputs" => $inputs
                 ]);
                 $pdf->setPaper("A4", "Potrait");
-                return $pdf->stream("datasiswa.pdf");
+                return $pdf->stream("datasiswa(lastproject).pdf");
         }
         public function excel()
         {
                 $inputs = Input::all();
-                return Excel::download(new InputsExport, 'datasiswa.xlsx');
+                return Excel::download(new InputsExport, 'datasiswa(lastproject).xlsx');
+        }
+
+        public function grafik()
+        {
+                return view('user.grafik');
         }
 }

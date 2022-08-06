@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="checkout">
+<section class="input">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12 col-12">

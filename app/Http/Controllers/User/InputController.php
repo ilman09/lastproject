@@ -7,7 +7,6 @@ use App\Models\Input;
 use Illuminate\Http\Request;
 use App\Http\Requests\User\Input\Store;
 use Auth;
-use Mail;
 
 class InputController extends Controller
 {
