@@ -37,8 +37,14 @@
                             <td>{{$input->asal_kota}}</td>
                             <td>{{$input->asal_sekolah}}</td>
                             <td>
-                                <a href="{{route('input.edit',$input->id)}}"class="btn btn-info">Edit</a>
-                                <a href="#"class="btn btn-danger">Hapus</a>
+                                <a href="{{route('input.edit',$input->id)}}" class="btn btn-info">Edit</a>
+                                <form action="{{route('input.delete',$input->id)}}" method="POST" onsubmit="return confirm('Data anda akan dihapus oleh sistem!')">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="btn btn-danger">
+                                        Hapus
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                         @empty
