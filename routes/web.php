@@ -22,7 +22,10 @@ Route::get('/', function () {
 
 Route::get('input/success', [InputController::class, 'success'])->name('input.success');
 Route::get('input', [InputController::class, 'create'])->name('input.create');
+Route::get('input/edit/{id}', [InputController::class, 'edit'])->name('input.edit');
+Route::put('input/update/{id}', [InputController::class, 'update'])->name('input.update');
 Route::post('input', [InputController::class, 'store'])->name('input.store');
+Route::delete('input/delete/{id}',[InputController::class, 'delete'])->name('input.delete');
 
 //socialite route
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');

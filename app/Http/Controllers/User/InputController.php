@@ -69,12 +69,11 @@ class InputController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Input  $input
-     * @return \Illuminate\Http\Response
      */
-    public function edit(Input $input)
+    public function edit($id)
     {
-        //
+        $sis = Input::find($id);
+        return view('input.edit',["inputs" => $sis]);
     }
 
     /**
@@ -84,9 +83,25 @@ class InputController extends Controller
      * @param  \App\Models\Input  $input
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Input $input)
+    public function update(Request $request, Input $input,$id)
     {
-        //
+        $sis = Input::find($id);
+
+        if (!$sis) {
+            return redirect()->back()->with('error', "Data Not found!");
+        }
+
+        $sis->nis = $request->nis;
+        $sis->nama_siswa = $request->nama_siswa;
+        $sis->jenis_kelamin = $request->jenis_kelamin;
+        $sis->tahun = $request->tahun;
+        $sis->asal_kota = $request->asal_kota;
+        $sis->asal_sekolah = $request->asal_sekolah;
+
+        $sis->save();
+
+        return redirect()->route('dashboard')->with('success', "Data berhasil di update!");
+
     }
 
     /**
@@ -95,9 +110,12 @@ class InputController extends Controller
      * @param  \App\Models\Input  $input
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Input $input)
+    public function delete($id)
     {
-        //
+        $sis = Input::find($id);
+        $sis->delete();
+
+        return redirect()->route('dashboard')->with('success', "Data berhasil di hapus!");
     }
 
     public function success()

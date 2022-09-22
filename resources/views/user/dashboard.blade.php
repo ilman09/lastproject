@@ -5,19 +5,26 @@
     <div class="row">
         <div class="col-8 offset-2">
             <div class="card mt-3">
+                @if($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <span>{{ $message }}</span>
+                </div>
+                @endif
                 <div class="card-header">
                     My Data
                 </div>
+
                 <div class="card-body">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>Nis</th>
                                 <th>Nama Siswa</th>
-                                <th>jenis Kelamin</th>
+                                <th>Jenis Kelamin</th>
                                 <th>Tahun Masuk</th>
                                 <th>Asal Kota</th>
                                 <th>Asal Sekolah</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         </tbody>
@@ -29,6 +36,10 @@
                             <td>{{$input->tahun}}</td>
                             <td>{{$input->asal_kota}}</td>
                             <td>{{$input->asal_sekolah}}</td>
+                            <td>
+                                <a href="{{route('input.edit',$input->id)}}"class="btn btn-info">Edit</a>
+                                <a href="#"class="btn btn-danger">Hapus</a>
+                            </td>
                         </tr>
                         @empty
                         <tr>
