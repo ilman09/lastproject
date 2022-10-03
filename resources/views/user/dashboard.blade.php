@@ -5,15 +5,17 @@
     <div class="row">
         <div class="col-8 offset-2">
             <div class="card mt-3">
+
                 @if($message = Session::get('success'))
                 <div class="alert alert-success">
                     <span>{{ $message }}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
+
                 <div class="card-header">
                     My Data
                 </div>
-
                 <div class="card-body">
                     <table class="table">
                         <thead>
